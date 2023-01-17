@@ -21,4 +21,18 @@ RSpec.describe "make_snippet method" do
       expect(string).to eq "hello my name is chris..."
     end
   end
+
+  context "When a string is 7 words" do
+    it "returns the first 5 words of the string and ... at the end" do
+      string = make_snippet("hello there my name is chris leech")
+      expect(string).to eq "hello there my name is..."
+    end
+  end
+
+  context "When a string is 1 word" do
+    it "returns the string" do
+      string = make_snippet("hello")
+      expect(string).to eq "hello"
+    end
+  end
 end
