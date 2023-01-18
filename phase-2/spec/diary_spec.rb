@@ -1,61 +1,69 @@
 require "diary"
 
 describe "make_snippet method" do
-  context "When an empty string is passed to the method" do
+  context "given an empty string" do
     it "returns an empty string" do
-      string = make_snippet("")
-      expect(string).to eq ""
+      input = ""
+      result = make_snippet(input)
+      expect(result).to eq ""
     end
   end
 
-  context "When a string which is fewer than 5 words is passed" do
+  context "given a string of fewer than 5 words" do
     it "returns the whole string" do
-      string = make_snippet("hello my name chris")
-      expect(string).to eq "hello my name chris"
+      input = "hello my name chris"
+      result = make_snippet(input)
+      expect(result).to eq "hello my name chris"
     end
   end
 
-  context "When a string is 6 words" do
-    it "returns the first 5 words of the string and ... at the end" do
-      string = make_snippet("hello my name is chris leech")
-      expect(string).to eq "hello my name is chris..."
+  context "given a string of 6 words" do
+    it "returns the first 5 words of the string with an ellipsis at the end" do
+      input = "hello my name is chris leech"
+      result = make_snippet(input)
+      expect(result).to eq "hello my name is chris..."
     end
   end
 
-  context "When a string is 7 words" do
-    it "returns the first 5 words of the string and ... at the end" do
-      string = make_snippet("hello there my name is chris leech")
-      expect(string).to eq "hello there my name is..."
+  context "given a string of 7 words" do
+    it "returns the first 5 words of the string with an ellipsis at the end" do
+      input = "hello there my name is chris leech"
+      result = make_snippet(input)
+      expect(result).to eq "hello there my name is..."
     end
   end
 
-  context "When a string is 1 word" do
+  context "given a string of 1 word" do
     it "returns the string" do
-      string = make_snippet("hello")
-      expect(string).to eq "hello"
+      input = "hello"
+      result = make_snippet(input)
+      expect(result).to eq "hello"
     end
   end
 end
 
 describe "count_words method" do
-  context "When a string is empty" do
+  context "given an empty string" do
     it "returns 0" do
-      string = count_words("")
-      expect(string).to eq 0
+      input = ""
+      result = count_words(input)
+      expect(result).to eq 0
     end
   end
 
-  context "When the string has 1 word" do
+  context "given a string of 1 word" do
     it "returns 1" do
-      string = count_words("hello")
-      expect(string).to eq 1
+      input = "hello"
+      result = count_words(input)
+      expect(result).to eq 1
     end
   end
 
-  context "When the string has 2 words" do
+  context "given a string of 2 words" do
     it "returns 2" do
-      string = count_words("hello world")
-      expect(string).to eq 2
+      input = "hello world"
+      result = count_words(input)
+      expect(result).to eq 2
     end
   end
 end

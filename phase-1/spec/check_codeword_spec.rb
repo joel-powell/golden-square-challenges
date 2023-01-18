@@ -1,18 +1,27 @@
 require "check_codeword"
 
 describe "check_codeword method" do
-  it "correct password is provided" do
-    result = check_codeword("horse")
-    expect(result).to eq "Correct! Come in."
+  context "given the correct codeword" do
+    it "returns a correct message" do
+      input = "horse"
+      result = check_codeword(input)
+      expect(result).to eq "Correct! Come in."
+    end
   end
 
-  it "first and last characters of password are correct" do
-    result = check_codeword("house")
-    expect(result).to eq "Close, but nope."
+  context "given a codeword where the first and last characters are correct" do
+    it "returns a close message" do
+      input = "house"
+      result = check_codeword(input)
+      expect(result).to eq "Close, but nope."
+    end
   end
 
-  it "wrong password provided" do
-    result = check_codeword("joel")
-    expect(result).to eq "WRONG!"
+  context "given the wrong codeword" do
+    it "returns a wrong message" do
+      input = "joel"
+      result = check_codeword(input)
+      expect(result).to eq "WRONG!"
+    end
   end
 end
