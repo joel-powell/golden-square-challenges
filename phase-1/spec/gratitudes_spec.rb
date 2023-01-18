@@ -1,6 +1,6 @@
 require "gratitudes"
 
-RSpec.describe Gratitudes do
+describe Gratitudes do
   it "returns no gratitudes" do
     gratitudes = Gratitudes.new
     result = gratitudes.format

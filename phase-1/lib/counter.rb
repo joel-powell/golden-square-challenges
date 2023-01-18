@@ -8,6 +8,6 @@ class Counter
   end
 
   def report
-    return "Counted to #{@count} so far."
+    "Counted to #{@count} so far."
   end
 end

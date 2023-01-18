@@ -1,6 +1,6 @@
-require 'check_codeword'
+require "check_codeword"
 
-RSpec.describe "check_codeword method" do
+describe "check_codeword method" do
   it "correct password is provided" do
     result = check_codeword("horse")
     expect(result).to eq "Correct! Come in."

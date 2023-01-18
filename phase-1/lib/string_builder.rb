@@ -8,10 +8,10 @@ class StringBuilder
   end
 
   def size
-    return @str.length
+    @str.length
   end
 
   def output
-    return @str
+    @str
   end
 end

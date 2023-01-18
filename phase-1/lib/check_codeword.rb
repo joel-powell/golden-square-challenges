@@ -1,9 +1,9 @@
 def check_codeword(codeword)
   if codeword == "horse"
-    return "Correct! Come in."
+    "Correct! Come in."
   elsif codeword.chars.first == "h" && codeword.chars.last == "e"
-    return "Close, but nope."
+    "Close, but nope."
   else
-    return "WRONG!"
+    "WRONG!"
   end
 end

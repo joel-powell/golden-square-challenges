@@ -1,6 +1,6 @@
-require 'diary'
+require "diary"
 
-RSpec.describe "make_snippet method" do
+describe "make_snippet method" do
   context "When an empty string is passed to the method" do
     it "returns an empty string" do
       string = make_snippet("")
@@ -37,7 +37,7 @@ RSpec.describe "make_snippet method" do
   end
 end
 
-RSpec.describe "count_words method" do
+describe "count_words method" do
   context "When a string is empty" do
     it "returns 0" do
       string = count_words("")

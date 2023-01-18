@@ -1,6 +1,6 @@
 require "password_checker"
 
-RSpec.describe PasswordChecker do
+describe PasswordChecker do
   context "when no password is given" do
     it "fails" do
       password = PasswordChecker.new

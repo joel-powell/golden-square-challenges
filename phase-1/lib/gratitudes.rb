@@ -9,7 +9,7 @@ class Gratitudes
 
   def format
     formatted = "Be grateful for: "
-    formatted += @gratitudes.join(", ")
-    return formatted
+    formatted << @gratitudes.join(", ")
+    formatted
   end
 end

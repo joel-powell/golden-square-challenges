@@ -1,6 +1,6 @@
-require 'counter'
+require "counter"
 
-RSpec.describe Counter do
+describe Counter do
   it "returns a counter that hasn't been added to" do
     count = Counter.new
     result = count.report

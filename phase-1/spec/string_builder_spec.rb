@@ -1,6 +1,6 @@
 require "string_builder"
 
-RSpec.describe StringBuilder do
+describe StringBuilder do
   it "returns an empty string" do
     string = StringBuilder.new
     result = string.output

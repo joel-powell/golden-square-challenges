@@ -1,3 +1,3 @@
 def greet(name)
-  return "Hello, #{name}!"
+  "Hello, #{name}!"
 end
