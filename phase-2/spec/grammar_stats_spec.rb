@@ -1,6 +1,6 @@
 require "grammar_stats"
 
-describe "GrammarStats" do
+describe GrammarStats do
   describe "#check" do
     context "given a string with correct grammar" do
       it "returns true" do
