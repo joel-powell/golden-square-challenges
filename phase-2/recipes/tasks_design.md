@@ -15,8 +15,6 @@
 _Include the initializer and public methods with all parameters and return values._
 
 ```ruby
-# EXAMPLE
-
 class Tasks
   def initialize
   end
@@ -42,8 +40,6 @@ end
 _Make a list of examples of how the class will behave in different situations._
 
 ```ruby
-# EXAMPLE
-
 # 1
 tasks = Tasks.new
 tasks.list # => []
