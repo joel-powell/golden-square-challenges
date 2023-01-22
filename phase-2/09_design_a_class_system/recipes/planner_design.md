@@ -56,16 +56,6 @@ class DiaryEntry
   end
   
   attr_reader :title,:contents,:word_count,:phone_numbers
-  
-  private
-  
-  def count_words
-    # returns integer of the number of words in contents
-  end
-  
-  def extract_phone_numbers
-    # returns array of phone numbers found in contents as strings
-  end
 end
 
 class TodoList
@@ -83,8 +73,10 @@ class TodoList
 end
 
 class Todo
-  def initialize(task)
+  def initialize(task) # task is a string
   end
+  
+  attr_reader :task
 end
 ```
 
@@ -125,6 +117,14 @@ diary.add(entry_3)
 diary.longest_readable_entry(1, 4) # => entry_2
 
 # TODO INTEGRATION
+
+# returns all todos
+todo_list = TodoList.new
+todo_1 = Todo.new("Go to shop")
+todo_2 = Todo.new("Empty bins")
+todo_list.add(todo_1)
+todo_list.add(todo_2)
+todo_list.all # => [todo_1, todo_2]
 ```
 
 ## 4. Create Examples as Unit Tests
@@ -133,11 +133,7 @@ _Create examples, where appropriate, of the behaviour of each relevant class at
 a more granular level of detail._
 
 ```ruby
-# EXAMPLE
-
-# Constructs a track
-track = Track.new("Carte Blanche", "Veracocha")
-track.title # => "Carte Blanche"
+# as needed
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
