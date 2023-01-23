@@ -3,7 +3,7 @@ class MusicLibrary
     @tracks = []
   end
 
-  def add(track) # track is an instance of Track
+  def add(track)
     @tracks << track
   end
 
@@ -12,7 +12,6 @@ class MusicLibrary
   end
 
   def search(keyword)
-    @tracks.filter { |track| track.matches? keyword } 
-    
+    @tracks.select { _1.matches?(keyword) }
   end
 end

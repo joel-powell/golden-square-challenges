@@ -4,7 +4,7 @@ class Track
     @artist = artist
   end
 
-  def matches?(keyword) 
-    @title == keyword
+  def matches?(keyword)
+    @title.include?(keyword) || @artist.include?(keyword)
   end
 end
