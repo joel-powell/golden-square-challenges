@@ -2,7 +2,7 @@ require "secret_diary"
 require "diary"
 
 describe "integration" do
-  context "given the diary is locked" do
+  context "initially" do
     it "raises the error 'Go away!'" do
       diary = Diary.new("Dear diary")
       secret_diary = SecretDiary.new(diary)

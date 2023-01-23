@@ -1,5 +1,5 @@
 class SecretDiary
-  def initialize(diary) # diary is an instance of Diary
+  def initialize(diary)
     @diary = diary
     @locked = true
   end
