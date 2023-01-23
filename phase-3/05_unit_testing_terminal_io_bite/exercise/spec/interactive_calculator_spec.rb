@@ -1,7 +1,7 @@
 require "interactive_calculator"
 
 describe InteractiveCalculator do
-  it "substracts two numbers" do
+  it "subtracts two numbers" do
     io = double :io
     expect(io).to receive(:puts).with("Hello. I will subtract two numbers.").ordered
     expect(io).to receive(:puts).with("Please enter a number").ordered
