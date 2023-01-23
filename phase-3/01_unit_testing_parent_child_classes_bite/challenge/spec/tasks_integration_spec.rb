@@ -1,7 +1,7 @@
 require "task_list"
 require "task"
 
-RSpec.describe "tasks integration" do
+describe "tasks integration" do
   it "adds tasks to a list" do
     task_list = TaskList.new
     task_1 = Task.new("Walk the dog")
@@ -19,6 +19,6 @@ RSpec.describe "tasks integration" do
     task_list.add(task_2)
     task_1.mark_complete
     task_2.mark_complete
-    expect(task_list.all_complete?).to eq true
+    expect(task_list.all_complete?).to be true
   end
 end

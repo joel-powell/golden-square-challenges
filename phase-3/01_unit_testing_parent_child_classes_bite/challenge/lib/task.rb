@@ -4,15 +4,13 @@ class Task
     @complete = false
   end
 
-  def title
-    return @title
-  end
+  attr_reader :title
 
   def mark_complete
     @complete = true
   end
 
   def complete?
-    return @complete
+    @complete
   end
 end

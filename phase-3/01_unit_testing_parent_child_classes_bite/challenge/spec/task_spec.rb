@@ -1,6 +1,6 @@
 require "task"
 
-RSpec.describe Task do
+describe Task do
   it "constructs" do
     task = Task.new("Walk the dog")
     expect(task.title).to eq "Walk the dog"
@@ -9,6 +9,6 @@ RSpec.describe Task do
   it "can be marked as complete" do
     task = Task.new("Walk the dog")
     task.mark_complete
-    expect(task.complete?).to eq true
+    expect(task.complete?).to be true
   end
 end
