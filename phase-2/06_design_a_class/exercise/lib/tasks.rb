@@ -10,6 +10,8 @@ class Tasks
   def add(task)
     raise "Task cannot be empty" if task.empty?
 
+    raise "Task already exists" if @tasks.include?(task)
+
     @tasks << task
   end
 
